@@ -45,11 +45,13 @@
 import { useEffect, useState } from "react";
 import { fetchWooCommerceProducts } from "../../utils/woocommerce";
 import Image from "next/image";
+import Link from "next/link";
 
 interface Products{
   name: string
   images: {src: string}[]
   description: string
+  slug: string
 }
 
 export default function MainPage() {
@@ -93,7 +95,9 @@ export default function MainPage() {
       <div className="flex flex-wrap justify-between">
         {products.map((item, index) => (
           <div className="w-[30%] py-6" key={index}>
+            <Link href={`/product/${item.slug}`}>
             <img src={item.images[0].src} alt={item.name} width={300} height={300} />
+            </Link>
             <h2 className="text-1xl font-bold">{item.name}</h2>
             <div dangerouslySetInnerHTML={{ __html: truncateHTML(item.description, 8) }} />
           </div>
