@@ -2,9 +2,9 @@ import WooCommerceRestApi from "@woocommerce/woocommerce-rest-api";
 
 // initialise the WooCommerceRestApi //
 const api = new WooCommerceRestApi({
-  url: "http://localhost/wordpress",
-  consumerKey: "ck_589031ae86104662d1f829fbb391ccf1b6de5edb",
-  consumerSecret: "cs_bca0680fa924259791281bb1030a15058f09f1da",
+  url: "https://next-wordpress.local/",
+  consumerKey: "ck_05d98f919cade9ecfb6feaf766c68b761376ca30",
+  consumerSecret: "cs_d45f48c6a91277e45d190e8de8db4407aa3c6b0d",
   version: "wc/v3",
 });
 
